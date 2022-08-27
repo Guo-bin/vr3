@@ -15,27 +15,27 @@ const ArPage = () => {
   const [CmaIsOpen, setCmaIsOpen] = useState(true);
   const windowSize = useWindowSize();
 
-  useEffect(() => {
-    if (windowSize.height > windowSize.width) {
-      setOrientation(true);
-    } else {
-      setOrientation(false);
-    }
-    if (typeof window !== undefined) {
-      navigator.mediaDevices
-        .getUserMedia({ video: true })
-        .then((e) => {
-          setCmaIsOpen(true);
-        })
-        .catch((e) => {
-          setCmaIsOpen(false);
-        });
-    }
-  }, [windowSize.width]);
+  // useEffect(() => {
+  //   if (windowSize.height > windowSize.width) {
+  //     setOrientation(true);
+  //   } else {
+  //     setOrientation(false);
+  //   }
+  //   if (typeof window !== undefined) {
+  //     navigator.mediaDevices
+  //       .getUserMedia({ video: true })
+  //       .then((e) => {
+  //         setCmaIsOpen(true);
+  //       })
+  //       .catch((e) => {
+  //         setCmaIsOpen(false);
+  //       });
+  //   }
+  // }, [windowSize.width]);
 
   return (
     <>
-      {!CmaIsOpen && <CameraAuth />}
+      {/* {!CmaIsOpen && <CameraAuth />}
       {orientation ? (
         <div className={styles.arPage}>
           <Title />
@@ -57,7 +57,25 @@ const ArPage = () => {
         </div>
       ) : (
         <Orientation />
-      )}
+      )} */}
+      <div className={styles.arPage}>
+        <Title />
+        <Nav setOpenItem={setOpenItem} openItem={openItem} />
+        <section>
+          {openItem == "ImageExamplePage" && (
+            <ImageExamplePage setOpenItem={setOpenItem} />
+          )}
+          {openItem == "InstructionPage" && (
+            <InstructionPage setOpenItem={setOpenItem} />
+          )}
+          {openItem == "ViewInstructionPage" && (
+            <ViewInstructionPage setOpenItem={setOpenItem} />
+          )}
+          {openItem == "ViewGuidePage" && (
+            <ViewGuidePage setOpenItem={setOpenItem} />
+          )}
+        </section>
+      </div>
     </>
   );
 };
