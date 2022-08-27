@@ -1,0 +1,57 @@
+.android {
+  & .title {
+    text-align: center;
+    margin-top: 108px;
+    margin-bottom: 28px;
+  }
+  & .step {
+    margin-bottom: 24px;
+    & h4 {
+      margin-bottom: 4px;
+    }
+    & p {
+      display: flex;
+      align-items: center;
+    }
+  }
+  & .topSection {
+    display: flex;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    & .arrow {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+@media (min-width: 540px) {
+  .android {
+    & .title {
+      text-align: center;
+      margin-top: 108px;
+      margin-bottom: 28px;
+    }
+    & .step {
+      width: 50%;
+      margin: auto;
+      margin-bottom: 24px;
+      & h4 {
+        margin-bottom: 4px;
+      }
+      & p {
+        display: flex;
+        align-items: center;
+      }
+    }
+    & .topSection {
+      display: flex;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      & .arrow {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}

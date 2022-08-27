@@ -1,31 +1,27 @@
 import React, { useEffect, useRef, useState } from "react";
-import classnames from "classnames";
 import "mind-ar/dist/mindar-image.prod.js";
 import "aframe";
 import "mind-ar/dist/mindar-image-aframe.prod.js";
 import "aframe-extras";
-import useWindowSize from "utils/windowSize";
 import styles from "./index.module.scss";
 const Ar = () => {
   const sceneRef = useRef(null);
-  const [isOrientationChange, setIsOrientationChange] = useState();
-  // const windowSize = useWindowSize();
+
   useEffect(() => {
     const sceneEl = sceneRef.current;
-    if (sceneEl) {
-      const arSystem = sceneEl.systems["mindar-image-system"];
-      sceneEl.addEventListener("renderstart", () => {
-        arSystem.start(); // start AR
-      });
-    }
+    const arSystem = sceneEl.systems["mindar-image-system"];
+    sceneEl.addEventListener("renderstart", () => {
+      arSystem.start(); // start AR
+    });
+
     return () => {
       arSystem.stop();
     };
-  }, [sceneRef.current]);
+  }, []);
 
   return (
     <>
-      <div className={styles.container}>
+      <div className={styles.container} id='container'>
         <a-scene
           ref={sceneRef}
           mindar-image='imageTargetSrc: /mind/targets.mind; autoStart: false; uiLoading: no; uiError: no; uiScanning: no;'
@@ -41,8 +37,8 @@ const Ar = () => {
           <a-entity mindar-image-target='targetIndex: 0'>
             <a-gltf-model
               rotation='0 0 0 '
-              position='0 0 0.1'
-              scale='0.005 0.005 0.005'
+              position='0.4 -0.4 0'
+              scale='0.003 0.003 0.003'
               src='#avatarModel'
               animation-mixer='clip:Bip001|Take 001|BaseLayer'></a-gltf-model>
           </a-entity>
