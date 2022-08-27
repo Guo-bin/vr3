@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Avenir Next LT Pro, Avenir, Open Sans, Lantinghei TC,
+    Lantinghei SC, Noto Sans TC, sans-serif;
+  overflow: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
