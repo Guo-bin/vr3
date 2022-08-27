@@ -3,7 +3,7 @@ import classnames from "classnames";
 import styles from "./index.module.scss";
 const CardLeft = ({ data, classname }) => {
   const { arrow, dottedLine, cardTitle, backgroundImg, picture, finial } = data;
-  console.log(dottedLine);
+
   return (
     <div
       className={classnames({
