@@ -1,0 +1,79 @@
+.changeLanguage {
+  width: 20vw;
+  height: 62px;
+  text-align: center;
+  position: relative;
+
+  &:hover {
+    cursor: pointer;
+  }
+  & .icon {
+    margin-top: 8px;
+    width: 24px;
+    vertical-align: middle;
+    transform: scale(1.2);
+    pointer-events: none;
+  }
+  & .title {
+    font-size: 13px;
+    height: 18px;
+    position: absolute;
+    bottom: 12px;
+    right: 0;
+    left: 0;
+    pointer-events: none;
+  }
+
+  & .language {
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    margin: auto;
+    left: 0;
+
+    & .chinese {
+      margin: 0 auto;
+      border-radius: 50%;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      background-color: rgba($color: #2e8ab7, $alpha: 0.8);
+      cursor: pointer;
+      transform: translateY(100%);
+      opacity: 0;
+      transition: all 0.3s;
+      position: relative;
+      z-index: -1;
+    }
+    & .chineseAnimation {
+      transform: translateY(0);
+      opacity: 1;
+      margin: 8px auto;
+    }
+    & .english {
+      z-index: -1;
+      position: relative;
+      transition: all 0.3s;
+      opacity: 0;
+      transform: translateY(200%);
+      cursor: pointer;
+      margin: 0 auto;
+      border-radius: 50%;
+      line-height: 40px;
+      width: 48px;
+      height: 48px;
+      background-color: rgba($color: #fff, $alpha: 0.8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    & .englishAnimation {
+      margin: 8px auto;
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}

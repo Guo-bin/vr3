@@ -1,0 +1,60 @@
+.viewInstructionPage {
+  background-color: rgba($color: #fff, $alpha: 0.8);
+  // opacity: 0.5;
+  position: absolute;
+  top: 5vh;
+  bottom: 15vh;
+  margin: 0 18px;
+  height: 70vh;
+  border-radius: 15px;
+  & .container {
+    padding: 0 10px 10px 10px;
+    margin: 60px 32px 32px 32px;
+    height: calc(100% - 92px);
+    overflow: auto;
+    &::-webkit-scrollbar {
+      width: 3px;
+      -webkit-appearance: none;
+    }
+    &::-webkit-scrollbar-track {
+    }
+    &::-webkit-scrollbar-thumb {
+      height: 200px;
+      background-color: #2e8ab7;
+
+      // outline: 1px solid slategrey;
+    }
+    & .title {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #2c413d;
+      font-size: 24px;
+    }
+    & .borderBottom {
+      width: 40px;
+      height: 2px;
+      margin: auto;
+      background-color: #2e8ab7;
+      margin-bottom: 20px;
+    }
+  }
+  & .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    img {
+      svg {
+        fill: #2c413d;
+        path {
+          fill: #2c413d;
+          background-color: #2c413d;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 540px) {
+  .viewpointGuidPage {
+    height: 80vh;
+  }
+}

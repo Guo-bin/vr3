@@ -1,0 +1,40 @@
+.bar {
+  user-select: none;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 64px;
+  position: relative;
+  //   overflow: hidden;
+  & .bar__time_current {
+    // color: white;
+    font-size: 16px;
+    position: absolute;
+    bottom: 4px;
+    left: -20px;
+  }
+  & .bar__time_end {
+    position: absolute;
+    bottom: 4px;
+    right: -20px;
+    font-size: 16px;
+  }
+  .bar__progress {
+    flex: 1;
+    border-radius: 10px;
+    // margin: 0 20px;
+    height: 4px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    .bar__progress__knob {
+      position: relative;
+      height: 16px;
+      width: 16px;
+      border: 1.5px solid white;
+      border-radius: 50%;
+      background-color: #2e8ab7;
+    }
+  }
+}

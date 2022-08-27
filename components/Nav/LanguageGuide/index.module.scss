@@ -1,0 +1,28 @@
+.languageGuide {
+  width: 20vw;
+  height: 62px;
+  text-align: center;
+  position: relative;
+  & .icon {
+    margin-top: 11px;
+    width: 21px;
+    height: 18px;
+    vertical-align: middle;
+    transform: scale(1.2);
+    pointer-events: none;
+  }
+
+  & .title {
+    font-size: 13px;
+    height: 18px;
+    position: absolute;
+    bottom: 12px;
+    width: 100%;
+    right: 0;
+    left: 0;
+    pointer-events: none;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}

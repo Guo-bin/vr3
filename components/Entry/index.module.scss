@@ -1,0 +1,38 @@
+.entry {
+  text-align: center;
+  & .title {
+    margin: 40px 0 24px 0;
+    font-size: 24px;
+  }
+  & .description {
+    margin: 0 auto;
+    width: 280px;
+  }
+  & .go {
+    margin: 24px auto;
+  }
+  & .container {
+    width: 300px;
+    margin: 0 auto;
+    height: 960px;
+  }
+}
+
+@media (min-width: 540px) {
+  .entry {
+    & .title {
+      font-size: 32px;
+      margin: 80px 0 60px 0;
+    }
+    & .description {
+      width: 440px;
+    }
+    & .go {
+      margin: 60px;
+    }
+    & .container {
+      height: 1600px;
+      width: 500px;
+    }
+  }
+}
