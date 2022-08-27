@@ -26,9 +26,9 @@ const ImageExamplePage = ({ setOpenItem }) => {
           <img className={styles.img} src={img.src} alt='' />
           <img className={styles.phone} src={phone.src} alt='' />
         </div>
-        <button className={styles.btn} onClick={closeHandler}>
+        <a className={styles.btn} onClick={closeHandler}>
           開始探索
-        </button>
+        </a>
       </div>
     </div>
   );
