@@ -13,6 +13,7 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "aframe": "^1.2.0",
+    "aframe-extras": "^6.1.1",
     "aframe-react": "^4.4.0",
     "classnames": "^2.3.1",
     "mind-ar": "^1.0.0",
