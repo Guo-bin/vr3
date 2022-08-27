@@ -21,16 +21,16 @@ const ArPage = () => {
     } else {
       setOrientation(false);
     }
-    // if (typeof window !== undefined) {
-    //   navigator.mediaDevices
-    //     .getUserMedia({ video: true })
-    //     .then((e) => {
-    //       setCmaIsOpen(true);
-    //     })
-    //     .catch((e) => {
-    //       setCmaIsOpen(false);
-    //     });
-    // }
+    if (typeof window !== undefined) {
+      navigator.mediaDevices
+        .getUserMedia({ video: true })
+        .then((e) => {
+          setCmaIsOpen(true);
+        })
+        .catch((e) => {
+          setCmaIsOpen(false);
+        });
+    }
   }, [windowSize.width]);
 
   return (
