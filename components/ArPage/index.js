@@ -12,7 +12,7 @@ import styles from "./index.module.scss";
 const ArPage = () => {
   const [openItem, setOpenItem] = useState("ImageExamplePage");
   const [orientation, setOrientation] = useState(null);
-  const [CmaIsOpen, setCmaIsOpen] = useState(true);
+  const [CmaIsOpen, setCmaIsOpen] = useState(false);
   const windowSize = useWindowSize();
 
   useEffect(() => {
@@ -21,21 +21,22 @@ const ArPage = () => {
     } else {
       setOrientation(false);
     }
-    // if (typeof window !== undefined) {
-    //   navigator.mediaDevices
-    //     .getUserMedia({ video: true })
-    //     .then((e) => {
-    //       setCmaIsOpen(true);
-    //     })
-    //     .catch((e) => {
-    //       setCmaIsOpen(false);
-    //     });
-    // }
   }, [windowSize.width]);
-
+  useEffect(() => {
+    if (typeof window !== undefined) {
+      navigator.mediaDevices
+        .getUserMedia({ video: true })
+        .then((e) => {
+          setCmaIsOpen(true);
+        })
+        .catch((e) => {
+          setCmaIsOpen(false);
+        });
+    }
+  }, []);
   return (
     <>
-      {/* {!CmaIsOpen && <CameraAuth />} */}
+      {!CmaIsOpen && <CameraAuth />}
       {orientation ? (
         <div className={styles.arPage}>
           <Title />

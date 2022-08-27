@@ -1,19 +1,21 @@
 import React, { useEffect, useRef, useState } from "react";
+import classnames from "classnames";
 import "mind-ar/dist/mindar-image.prod.js";
 import "aframe";
 import "mind-ar/dist/mindar-image-aframe.prod.js";
 import "aframe-extras";
+import useWindowSize from "utils/windowSize";
 import styles from "./index.module.scss";
 const Ar = () => {
   const sceneRef = useRef(null);
-
+  const [isOrientationChange, setIsOrientationChange] = useState();
+  // const windowSize = useWindowSize();
   useEffect(() => {
     const sceneEl = sceneRef.current;
     if (sceneEl) {
       const arSystem = sceneEl.systems["mindar-image-system"];
       sceneEl.addEventListener("renderstart", () => {
         arSystem.start(); // start AR
-        console.log("start");
       });
     }
     return () => {
