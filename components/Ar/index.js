@@ -4,10 +4,11 @@ import "aframe";
 import "mind-ar/dist/mindar-image-aframe.prod.js";
 import "aframe-extras";
 import styles from "./index.module.scss";
-const Ar = () => {
+const Ar = ({ targetUrl, model }) => {
   const sceneRef = useRef(null);
 
   useEffect(() => {
+    console.log(targetUrl);
     const sceneEl = sceneRef.current;
     const arSystem = sceneEl.systems["mindar-image-system"];
     sceneEl.addEventListener("renderstart", () => {
@@ -24,14 +25,14 @@ const Ar = () => {
       <div className={styles.container} id='container'>
         <a-scene
           ref={sceneRef}
-          mindar-image='imageTargetSrc: /mind/targets.mind; autoStart: false; uiLoading: no; uiError: no; uiScanning: no;'
+          mindar-image={`imageTargetSrc: ${targetUrl}; autoStart: false; uiLoading: no; uiError: no; uiScanning: no;`}
           color-space='sRGB'
           embedded
           renderer='colorManagement: true, physicallyCorrectLights'
           vr-mode-ui='enabled: false'
           device-orientation-permission-ui='enabled: false'>
           <a-assets>
-            <a-asset-item id='avatarModel' src='/glb/women.glb'></a-asset-item>
+            <a-asset-item id='avatarModel' src={model}></a-asset-item>
           </a-assets>
           <a-camera position='0 0 0' look-controls='enabled: false'></a-camera>
           <a-entity mindar-image-target='targetIndex: 0'>

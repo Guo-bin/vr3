@@ -4,17 +4,17 @@ const DynamicArjs = dynamic(() => import("../../components/Ar"), {
   ssr: false,
 });
 
-function TestAr({ scene }) {
+function TestAr({ target }) {
   return (
     <div>
-      <DynamicArjs nftUrl={`/nfts/${scene}`} model='/glb/women.glb' />
+      <DynamicArjs targetUrl={`/mind/${target}.mind`} model='/glb/women.glb' />
       <ArPageComponent />
     </div>
   );
 }
 
 export const getServerSideProps = async ({ query }) => {
-  return { props: { scene: query.s || "test-no1" } };
+  return { props: { target: query.id || "targets" } };
 };
 
 export default TestAr;
