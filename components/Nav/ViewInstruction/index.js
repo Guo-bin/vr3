@@ -1,5 +1,5 @@
 import React from "react";
-import icon from "public/images/icon/viewpointGuide.svg";
+import icon from "public/images/group.png";
 import styles from "./index.module.scss";
 const ViewInstruction = () => {
   return (
