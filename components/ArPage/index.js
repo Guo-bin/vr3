@@ -24,14 +24,15 @@ const ArPage = () => {
     // } else {
     //   setOrientation(false);
     // }
-    screen.lockOrientationUniversal =
-      screen.lockOrientation ||
-      screen.mozLockOrientation ||
-      screen.msLockOrientation;
+
     screen.orientation.lock("portrait").then(
       (success) => console.log(success),
       (failure) => console.log(failure)
     );
+    screen.lockOrientationUniversal =
+      screen.lockOrientation ||
+      screen.mozLockOrientation ||
+      screen.msLockOrientation;
   }, [windowSize.width]);
   useEffect(() => {
     if (typeof window !== undefined) {
