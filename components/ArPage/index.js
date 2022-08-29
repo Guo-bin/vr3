@@ -19,6 +19,7 @@ const ArPage = () => {
   useEffect(() => {
     const body = document.querySelector("body");
     body.style.overflow = "hidden";
+    screen.orientation.lock("portrait");
     if (windowSize.height > windowSize.width) {
       setOrientation(true);
     } else {
