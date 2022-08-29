@@ -1,7 +1,9 @@
-import Head from "next/head";
-import Image from "next/image";
-// import styles from "../styles/globals.scss";
+import Homepage from "../components/home";
 
 export default function Home() {
-  return <div></div>;
+  return (
+    <div>
+      <Homepage />
+    </div>
+  );
 }

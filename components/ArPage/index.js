@@ -11,6 +11,7 @@ import Orientation from "components/Orientation";
 import styles from "./index.module.scss";
 const ArPage = () => {
   const [openItem, setOpenItem] = useState("ImageExamplePage");
+  const [isBtnShow, setBtnIsShow] = useState(false);
   const [orientation, setOrientation] = useState(null);
   const [CmaIsOpen, setCmaIsOpen] = useState(false);
   const windowSize = useWindowSize();
@@ -47,7 +48,11 @@ const ArPage = () => {
           <Nav setOpenItem={setOpenItem} openItem={openItem} />
           <section>
             {openItem == "ImageExamplePage" && (
-              <ImageExamplePage setOpenItem={setOpenItem} />
+              <ImageExamplePage
+                setOpenItem={setOpenItem}
+                isBtnShow={isBtnShow}
+                setBtnIsShow={setBtnIsShow}
+              />
             )}
             {openItem == "InstructionPage" && (
               <InstructionPage setOpenItem={setOpenItem} />

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import go from "public/images/icon/go.svg";
 import { v4 as uuidv4 } from "uuid";
 import Card from "./Card";
@@ -43,6 +43,10 @@ const data = [
   },
 ];
 const Entry = () => {
+  useEffect(() => {
+    const body = document.querySelector("body");
+    body.style.overflow = "auto";
+  }, []);
   return (
     <div className={styles.entry}>
       <h4 className={styles.title}>歡迎來到雙龍部落</h4>

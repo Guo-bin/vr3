@@ -1,11 +1,14 @@
 import React from "react";
+import { useRouter } from "next/router";
 import classnames from "classnames";
 import styles from "./index.module.scss";
 const CardLeft = ({ data, classname }) => {
   const { arrow, dottedLine, cardTitle, backgroundImg, picture, finial } = data;
+  const router = useRouter();
 
   return (
     <div
+      onClick={() => router.push("test")}
       className={classnames({
         [styles.cardLeft]: classname == "left",
         [styles.cardRight]: classname == "right",
