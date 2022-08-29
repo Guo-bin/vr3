@@ -7,9 +7,9 @@
   height: 70vh;
   border-radius: 15px;
   & .container {
-    padding: 0 10px 10px 0;
-    margin: 18px 16px 16px 25px;
-    width: 90%;
+    // padding: 0 0px 10px 0;
+    margin: 18px 22px 16px 32px;
+    // width: 90%;
     height: 100%;
     .viewpointContainer {
       height: calc(100% - 95px);
@@ -18,6 +18,10 @@
       display: flex;
       flex-wrap: wrap;
       width: 100%;
+      & > :nth-child(even) {
+        margin-left: auto;
+        margin-right: 10px;
+      }
       &::-webkit-scrollbar {
         width: 5px;
         -webkit-appearance: none;
@@ -50,7 +54,7 @@
   & .close {
     position: absolute;
     top: 20px;
-    right: 30px;
+    right: 20px;
     img {
       svg {
         fill: #2c413d;
@@ -68,9 +72,9 @@
     margin: 0 10vw;
     top: 80px;
     & .container {
-      margin: 31px 12px 0px 60px;
+      margin: 18px 50px 16px 60px;
       & .viewpointContainer {
-        height: calc(68vh - 200px);
+        height: calc(68vh - 150px);
       }
       width: fit-content;
       & .title {

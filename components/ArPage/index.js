@@ -11,8 +11,8 @@ import Orientation from "components/Orientation";
 import styles from "./index.module.scss";
 const ArPage = () => {
   const [openItem, setOpenItem] = useState("ImageExamplePage");
-  const [orientation, setOrientation] = useState(null);
-  const [CmaIsOpen, setCmaIsOpen] = useState(false);
+  const [orientation, setOrientation] = useState(true);
+  const [CmaIsOpen, setCmaIsOpen] = useState(true);
   const windowSize = useWindowSize();
 
   useEffect(() => {
@@ -24,18 +24,18 @@ const ArPage = () => {
       setOrientation(false);
     }
   }, [windowSize.width]);
-  useEffect(() => {
-    if (typeof window !== undefined) {
-      navigator.mediaDevices
-        .getUserMedia({ video: true })
-        .then((e) => {
-          setCmaIsOpen(true);
-        })
-        .catch((e) => {
-          setCmaIsOpen(false);
-        });
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (typeof window !== undefined) {
+  //     navigator.mediaDevices
+  //       .getUserMedia({ video: true })
+  //       .then((e) => {
+  //         setCmaIsOpen(true);
+  //       })
+  //       .catch((e) => {
+  //         setCmaIsOpen(false);
+  //       });
+  //   }
+  // }, []);
   return (
     <>
       {!CmaIsOpen && <CameraAuth />}
