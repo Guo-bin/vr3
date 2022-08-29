@@ -41,7 +41,9 @@ const ArPage = () => {
       {!CmaIsOpen && <CameraAuth />}
       {orientation ? (
         <div className={styles.arPage}>
-          <Title />
+          {openItem !== "ViewGuidePage" &&
+            openItem !== "ViewInstructionPage" && <Title />}
+
           <Nav setOpenItem={setOpenItem} openItem={openItem} />
           <section>
             {openItem == "ImageExamplePage" && (
