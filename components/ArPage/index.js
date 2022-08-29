@@ -12,18 +12,26 @@ import styles from "./index.module.scss";
 const ArPage = () => {
   const [openItem, setOpenItem] = useState("ImageExamplePage");
   const [isBtnShow, setBtnIsShow] = useState(false);
-  const [orientation, setOrientation] = useState(null);
+  const [orientation, setOrientation] = useState(true);
   const [CmaIsOpen, setCmaIsOpen] = useState(false);
   const windowSize = useWindowSize();
 
   useEffect(() => {
     const body = document.querySelector("body");
     body.style.overflow = "hidden";
-    if (windowSize.height > windowSize.width) {
-      setOrientation(true);
-    } else {
-      setOrientation(false);
-    }
+    // if (windowSize.height > windowSize.width) {
+    //   setOrientation(true);
+    // } else {
+    //   setOrientation(false);
+    // }
+    screen.lockOrientationUniversal =
+      screen.lockOrientation ||
+      screen.mozLockOrientation ||
+      screen.msLockOrientation;
+    screen.orientation.lock("portrait").then(
+      (success) => console.log(success),
+      (failure) => console.log(failure)
+    );
   }, [windowSize.width]);
   useEffect(() => {
     if (typeof window !== undefined) {
