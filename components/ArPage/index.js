@@ -29,10 +29,6 @@ const ArPage = () => {
       (success) => console.log(success),
       (failure) => console.log(failure)
     );
-    screen.lockOrientationUniversal =
-      screen.lockOrientation ||
-      screen.mozLockOrientation ||
-      screen.msLockOrientation;
   }, [windowSize.width]);
   useEffect(() => {
     if (typeof window !== undefined) {
