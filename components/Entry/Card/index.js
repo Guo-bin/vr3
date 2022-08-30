@@ -5,7 +5,7 @@ import styles from "./index.module.scss";
 const CardLeft = ({ data, classname }) => {
   const { arrow, dottedLine, cardTitle, backgroundImg, picture, finial } = data;
   const router = useRouter();
-  console.log(router.query);
+
   const [currentLan, setCurrentLan] = useState();
   useEffect(() => {
     const userLanguage =

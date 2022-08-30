@@ -62,7 +62,7 @@ const ArPage = () => {
       {orientation ? (
         <div className={styles.arPage}>
           {openItem !== "AttractionsPage" && openItem !== "IntroPage" && (
-            <Title />
+            <Title language={language} />
           )}
 
           <Nav
