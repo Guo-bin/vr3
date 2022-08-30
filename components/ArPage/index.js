@@ -45,7 +45,7 @@ const ArPage = () => {
     }
     if (typeof window !== undefined) {
       navigator.mediaDevices
-        .getUserMedia({ video: true })
+        .getUserMedia({ video: { facingMode: "environment" } })
         .then((e) => {
           setCmaIsOpen(true);
         })
