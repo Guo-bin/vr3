@@ -52,6 +52,7 @@
       transform: translateY(0);
       opacity: 1;
       margin: 8px auto;
+      z-index: 10;
     }
     & .english {
       z-index: -1;
@@ -74,6 +75,15 @@
       margin: 8px auto;
       transform: translateY(0);
       opacity: 1;
+      z-index: 10;
+    }
+  }
+}
+
+@media (max-width: 330px) {
+  .changeLanguage {
+    & .title {
+      font-size: 12px;
     }
   }
 }

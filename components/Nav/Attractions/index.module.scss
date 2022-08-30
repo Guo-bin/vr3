@@ -1,0 +1,32 @@
+.attractions {
+  width: 20vw;
+  height: 62px;
+  text-align: center;
+  position: relative;
+  & .icon {
+    margin-top: 8px;
+    width: 24px;
+    vertical-align: middle;
+    transform: scale(1.2);
+    pointer-events: none;
+  }
+  & .title {
+    font-size: 13px;
+    height: 18px;
+    position: absolute;
+    bottom: 12px;
+    right: 0;
+    left: 0;
+    pointer-events: none;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+@media (max-width: 330px) {
+  .attractions {
+    & .title {
+      font-size: 12px;
+    }
+  }
+}

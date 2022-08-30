@@ -1,0 +1,32 @@
+.intro {
+  width: 20vw;
+  height: 62px;
+  text-align: center;
+  position: relative;
+  & .icon {
+    width: 48px;
+    transform: translateY(-35%) scale(1.2);
+    vertical-align: middle;
+    pointer-events: none;
+  }
+
+  & .title {
+    position: absolute;
+    bottom: 12px;
+    right: 0;
+    left: 0;
+    font-size: 13px;
+    height: 18px;
+    pointer-events: none;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+@media (max-width: 330px) {
+  .intro {
+    & .title {
+      font-size: 12px;
+    }
+  }
+}

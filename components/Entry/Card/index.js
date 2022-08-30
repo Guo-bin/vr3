@@ -1,14 +1,30 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import classnames from "classnames";
 import styles from "./index.module.scss";
 const CardLeft = ({ data, classname }) => {
   const { arrow, dottedLine, cardTitle, backgroundImg, picture, finial } = data;
   const router = useRouter();
+  console.log(router.query);
+  const [currentLan, setCurrentLan] = useState();
+  useEffect(() => {
+    const userLanguage =
+      window.navigator.userLanguage || window.navigator.language;
+    if (
+      userLanguage.substr(0, 2) == "en" ||
+      userLanguage.substr(0, 2) == "En"
+    ) {
+      setCurrentLan("En");
+    } else {
+      setCurrentLan("Zh");
+    }
+  }, []);
 
   return (
     <div
-      onClick={() => router.push("test")}
+      onClick={() =>
+        router.push({ pathname: "/test", query: { language: currentLan } })
+      }
       className={classnames({
         [styles.cardLeft]: classname == "left",
         [styles.cardRight]: classname == "right",

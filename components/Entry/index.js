@@ -42,6 +42,7 @@ const data = [
     finial: true,
   },
 ];
+
 const Entry = () => {
   useEffect(() => {
     const body = document.querySelector("body");

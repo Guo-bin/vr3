@@ -6,7 +6,22 @@ import close from "public/images/icon/viewpointGuidClose.svg";
 import leftArrow from "public/images/icon/left_arrow.svg";
 import phone from "public/images/icon/phone.svg";
 import styles from "./index.module.scss";
-const ImageExamplePage = ({ setOpenItem, setBtnIsShow, isBtnShow }) => {
+const data = {
+  Zh: {
+    title: "尋找與照片中相同的景點圖像來發現3D 娃娃吧",
+    button: "開始探索",
+  },
+  En: {
+    title: "Go and find the attractions to meet our tour guide",
+    button: "START",
+  },
+};
+const ImageExamplePage = ({
+  setOpenItem,
+  setBtnIsShow,
+  isBtnShow,
+  language,
+}) => {
   const router = useRouter();
   const closeHandler = () => {
     setOpenItem(null);
@@ -32,9 +47,7 @@ const ImageExamplePage = ({ setOpenItem, setBtnIsShow, isBtnShow }) => {
       )}
 
       <div className={styles.container}>
-        <h3 className={styles.title}>
-          尋找與照片中一致的位置來發現 3D 娃娃吧！
-        </h3>
+        <h3 className={styles.title}>{data[language].title}</h3>
         <img className={styles.arrow} src={arrow.src} alt='' />
         <div className={styles.imgContainer}>
           <img className={styles.img} src={img.src} alt='' />
@@ -42,7 +55,7 @@ const ImageExamplePage = ({ setOpenItem, setBtnIsShow, isBtnShow }) => {
         </div>
         {!isBtnShow && (
           <a className={styles.btn} onClick={closeHandler}>
-            開始探索
+            {data[language].button}
           </a>
         )}
       </div>

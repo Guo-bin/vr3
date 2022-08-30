@@ -44,7 +44,7 @@ function useAudioPlayer() {
       setCurTime(audio.currentTime);
       setClickedTime(null);
     }
-  }, [playing, clickedTime]);
+  }, [playing, clickedTime, curTime]);
 
   return {
     curTime,

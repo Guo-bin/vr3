@@ -49,7 +49,7 @@ const LanguagePlayer = ({ setOpenItem }) => {
         onClick={closeHandler}
       />
       <audio
-        src='https://sf1-scmcdn-tos.pstatp.com/goofy/ee/sce/hera/music/She-Sells-Sea-Shells.mp3'
+        src='/song.mp3'
         id='audio'
         crossOrigin='
         anonymous'

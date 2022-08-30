@@ -8,7 +8,6 @@ const Ar = ({ targetUrl, model }) => {
   const sceneRef = useRef(null);
 
   useEffect(() => {
-    console.log(targetUrl);
     const sceneEl = sceneRef.current;
     const arSystem = sceneEl.systems["mindar-image-system"];
     sceneEl.addEventListener("renderstart", () => {
