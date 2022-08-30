@@ -54,7 +54,10 @@ const ImageExamplePage = ({
           <img className={styles.phone} src={phone.src} alt='' />
         </div>
         {!isBtnShow && (
-          <a className={styles.btn} onClick={closeHandler}>
+          <a
+            className={styles.btn}
+            onClick={closeHandler}
+            style={{ fontWeight: language == "Zh" ? "500" : "700" }}>
             {data[language].button}
           </a>
         )}
