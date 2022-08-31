@@ -11,7 +11,7 @@ import InfoPage from "components/InfoPage";
 import Orientation from "components/Orientation";
 import styles from "./index.module.scss";
 const ArPage = () => {
-  const [openItem, setOpenItem] = useState("null");
+  const [openItem, setOpenItem] = useState("ImageExamplePage");
   const [isBtnShow, setBtnIsShow] = useState(false);
   const [language, setLanguage] = useState("Zh");
   const [orientation, setOrientation] = useState(null);
@@ -45,7 +45,7 @@ const ArPage = () => {
     }
     if (typeof window !== undefined) {
       navigator.mediaDevices
-        .getUserMedia({ video: { facingMode: "environment" } })
+        .getUserMedia({ video: true })
         .then((e) => {
           setCmaIsOpen(true);
         })
