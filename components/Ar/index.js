@@ -14,14 +14,14 @@ const Ar = () => {
       });
     }
 
-    return () => {
-      if (sceneEl) {
-        const arSystem = sceneEl.systems["mindar-image-system"];
-        sceneEl.addEventListener("renderstart", () => {
-          arSystem.stop(); // stop AR
-        });
-      }
-    };
+    // return () => {
+    //   if (sceneEl) {
+    //     const arSystem = sceneEl.systems["mindar-image-system"];
+    //     sceneEl.addEventListener("renderstart", () => {
+    //       arSystem.stop(); // stop AR
+    //     });
+    //   }
+    // };
   }, [sceneRef.current]);
 
   return (
