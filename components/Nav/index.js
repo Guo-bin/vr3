@@ -3,6 +3,7 @@ import Info from "./Info";
 import LanguageGuide from "./LanguageGuide";
 import Intro from "./Intro";
 import Attractions from "./Attractions";
+import { AudioPlayer } from "components/AudioPlayer";
 import LanguagePlayer from "components/LanguagePlayer";
 import ChangeLanguage from "./ChangeLanguage";
 import Thumbnail from "./Thumbnail";
@@ -13,6 +14,10 @@ const Nav = ({ setOpenItem, openItem, language, setLanguage }) => {
     if (openItem !== clickItemName) {
       setOpenItem(clickItemName);
     } else {
+      const audio = document.querySelector("audio");
+      if (audio) {
+        audio.pause();
+      }
       setOpenItem(null);
     }
   };
@@ -33,9 +38,7 @@ const Nav = ({ setOpenItem, openItem, language, setLanguage }) => {
         />
       </div>
       <div className={styles.languagePlayer}>
-        {openItem == "LanguageGuide" && (
-          <LanguagePlayer setOpenItem={setOpenItem} />
-        )}
+        <AudioPlayer setOpenItem={setOpenItem} openItem={openItem} />
       </div>
     </nav>
   );

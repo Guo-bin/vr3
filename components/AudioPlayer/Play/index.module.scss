@@ -1,0 +1,10 @@
+.play {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  & .img {
+  }
+}
