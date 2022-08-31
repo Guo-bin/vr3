@@ -4,7 +4,6 @@ import LanguageGuide from "./LanguageGuide";
 import Intro from "./Intro";
 import Attractions from "./Attractions";
 import { AudioPlayer } from "components/AudioPlayer";
-import LanguagePlayer from "components/LanguagePlayer";
 import ChangeLanguage from "./ChangeLanguage";
 import Thumbnail from "./Thumbnail";
 import styles from "./index.module.scss";

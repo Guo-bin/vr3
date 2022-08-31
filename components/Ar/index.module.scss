@@ -1,13 +1,13 @@
 .container {
   position: fixed;
-  height: 100vh;
+  height: calc(100vh + 1px);
   width: 100vw;
   overflow: hidden;
 }
 
 @media (max-width: 530px) {
   .container {
-    height: 100vh;
+    height: calc(100vh + 1px);
     width: 100vw;
     & .video {
       width: 100%;

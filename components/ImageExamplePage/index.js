@@ -51,7 +51,9 @@ const ImageExamplePage = ({
         <img className={styles.arrow} src={arrow.src} alt='' />
         <div className={styles.imgContainer}>
           <img className={styles.img} src={img.src} alt='' />
-          <img className={styles.phone} src={phone.src} alt='' />
+          <div className={styles.phoneContainer}>
+            <img className={styles.phone} src={phone.src} alt='' />
+          </div>
         </div>
         {!isBtnShow && (
           <a

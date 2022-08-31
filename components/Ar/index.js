@@ -9,22 +9,19 @@ const Ar = ({ targetUrl, model }) => {
 
   useEffect(() => {
     const sceneEl = sceneRef.current;
+
+    const arSystem = sceneEl.systems["mindar-image-system"];
+    sceneEl.addEventListener("renderstart", () => {
+      arSystem.start(); // start AR
+    });
+
     if (sceneEl) {
       const arSystem = sceneEl.systems["mindar-image-system"];
       sceneEl.addEventListener("renderstart", () => {
-        arSystem.start(); // start AR
+        arSystem.stop(); // stop AR
       });
     }
-
-    return () => {
-      if (sceneEl) {
-        const arSystem = sceneEl.systems["mindar-image-system"];
-        sceneEl.addEventListener("renderstart", () => {
-          arSystem.stop(); // stop AR
-        });
-      }
-    };
-  }, [sceneRef.current]);
+  }, []);
 
   return (
     <>
