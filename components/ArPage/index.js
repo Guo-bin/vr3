@@ -56,9 +56,9 @@ const ArPage = () => {
   }, []);
   return (
     <>
-      {!CmaIsOpen && (
+      {/* {!CmaIsOpen && (
         <CameraAuth language={language} setLanguage={setLanguage} />
-      )}
+      )} */}
       {orientation ? (
         <div className={styles.arPage}>
           {openItem !== "AttractionsPage" && openItem !== "IntroPage" && (
