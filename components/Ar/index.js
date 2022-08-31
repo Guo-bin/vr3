@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import "mind-ar/dist/mindar-image.prod.js";
 import "aframe";
 import "mind-ar/dist/mindar-image-aframe.prod.js";
-const Ar () => {
+const Ar = () => {
   const sceneRef = useRef(null);
 
   useEffect(() => {
@@ -65,4 +65,4 @@ const Ar () => {
     </a-scene>
   );
 };
-export default Ar
+export default Ar;
