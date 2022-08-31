@@ -11,7 +11,7 @@ import InfoPage from "components/InfoPage";
 import Orientation from "components/Orientation";
 import styles from "./index.module.scss";
 const ArPage = () => {
-  const [openItem, setOpenItem] = useState("ImageExamplePage");
+  const [openItem, setOpenItem] = useState("null");
   const [isBtnShow, setBtnIsShow] = useState(false);
   const [language, setLanguage] = useState("Zh");
   const [orientation, setOrientation] = useState(null);
@@ -48,11 +48,9 @@ const ArPage = () => {
         .getUserMedia({ video: { facingMode: "environment" } })
         .then((e) => {
           setCmaIsOpen(true);
-          alert("success");
         })
         .catch((e) => {
           setCmaIsOpen(false);
-          alert("faile");
         });
     }
   }, []);
