@@ -8,7 +8,7 @@ import phone from "public/images/icon/phone.svg";
 import styles from "./index.module.scss";
 const data = {
   Zh: {
-    title: "尋找與照片中相同的景點圖像來發現3D 娃娃吧",
+    title: "尋找與照片中相同的景點圖像來發現3D娃娃吧",
     button: "開始探索",
   },
   En: {
