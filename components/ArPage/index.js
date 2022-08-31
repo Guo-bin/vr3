@@ -48,9 +48,11 @@ const ArPage = () => {
         .getUserMedia({ video: { facingMode: "environment" } })
         .then((e) => {
           setCmaIsOpen(true);
+          alert("success");
         })
         .catch((e) => {
           setCmaIsOpen(false);
+          alert("faile");
         });
     }
   }, []);
