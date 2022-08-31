@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import "mind-ar/dist/mindar-image.prod.js";
 import "aframe";
 import "mind-ar/dist/mindar-image-aframe.prod.js";
-import "aframe-extras";
+// import "aframe-extras";
 import styles from "./index.module.scss";
 const Ar = ({ targetUrl, model }) => {
   const sceneRef = useRef(null);
