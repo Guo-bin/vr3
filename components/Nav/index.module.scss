@@ -1,7 +1,7 @@
 .nav {
   position: fixed;
   bottom: -64px;
-  transition: 0.3s;
+  transition: 0.3s ease-in-out;
   & .navItem {
     background-color: #fff;
     height: 62px;
