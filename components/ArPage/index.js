@@ -55,7 +55,7 @@ const ArPage = () => {
     }
   }, []);
   return (
-    <>
+    <div className={styles.arPage}>
       {!CmaIsOpen && (
         <CameraAuth language={language} setLanguage={setLanguage} />
       )}
@@ -94,7 +94,7 @@ const ArPage = () => {
       ) : (
         <Orientation />
       )}
-    </>
+    </div>
   );
 };
 const ArPageComponent = memo(ArPage);

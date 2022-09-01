@@ -1,7 +1,6 @@
-import React, { useLayoutEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import go from "public/images/icon/go.svg";
 import { v4 as uuidv4 } from "uuid";
-
 import classnames from "classnames";
 import Card from "./Card";
 import icon from "public/images/icon/changeLanguage.svg";
@@ -68,7 +67,7 @@ const description = {
 const Entry = () => {
   const [currentLan, setCurrentLan] = useState();
   const [changeLanguageBtn, setChangeLanguageBtn] = useState(false);
-  useLayoutEffect(() => {
+  useEffect(() => {
     const body = document.querySelector("body");
     body.style.overflow = "auto";
 
