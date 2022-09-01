@@ -20,8 +20,8 @@ const ArPage = () => {
   const router = useRouter();
 
   useEffect(() => {
-    // const body = document.querySelector("body");
-    // body.style.overflow = "hidden";
+    const body = document.querySelector("body");
+    body.style.overflow = "hidden";
     if (windowSize.height > windowSize.width) {
       setOrientation(true);
     } else {
@@ -43,22 +43,22 @@ const ArPage = () => {
     } else {
       setLanguage(router.query.language);
     }
-    if (typeof window !== undefined) {
-      navigator.mediaDevices
-        .getUserMedia({ video: { facingMode: "environment" } })
-        .then((e) => {
-          setCmaIsOpen(true);
-        })
-        .catch((e) => {
-          setCmaIsOpen(false);
-        });
-    }
+    // if (typeof window !== undefined) {
+    //   navigator.mediaDevices
+    //     .getUserMedia({ video: { facingMode: "environment" } })
+    //     .then((e) => {
+    //       setCmaIsOpen(true);
+    //     })
+    //     .catch((e) => {
+    //       setCmaIsOpen(false);
+    //     });
+    // }
   }, []);
   return (
     <>
-      {!CmaIsOpen && (
+      {/* {!CmaIsOpen && (
         <CameraAuth language={language} setLanguage={setLanguage} />
-      )}
+      )} */}
       {orientation ? (
         <div className={styles.arPage}>
           {openItem !== "AttractionsPage" && openItem !== "IntroPage" && (
@@ -71,7 +71,7 @@ const ArPage = () => {
             setLanguage={setLanguage}
             language={language}
           />
-          <section>
+          <section className={styles.pageContainer}>
             {openItem == "ImageExamplePage" && (
               <ImageExamplePage
                 setOpenItem={setOpenItem}
