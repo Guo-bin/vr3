@@ -1,5 +1,6 @@
 .entry {
   text-align: center;
+
   & .title {
     margin: 40px 0 24px 0;
     font-size: 24px;
@@ -7,6 +8,7 @@
   & .description {
     margin: 0 auto;
     width: 280px;
+    font-size: 16px;
   }
   & .go {
     margin: 24px auto;
@@ -15,6 +17,79 @@
     width: 300px;
     margin: 0 auto;
     height: 960px;
+  }
+  & .changeLanguage {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 24px;
+    right: 18px;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    opacity: 0.8;
+
+    & img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+  & .language {
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    margin: auto;
+    left: 0;
+
+    & .chinese {
+      margin: 0 auto;
+      border-radius: 50%;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      background-color: rgba($color: #fff, $alpha: 0.8);
+      cursor: pointer;
+      transform: translateY(100%);
+      opacity: 0;
+      transition: all 0.3s;
+      position: relative;
+      z-index: -1;
+    }
+    & .showChineseBtn {
+      transform: translateY(0);
+      opacity: 1;
+      margin: 8px auto;
+      z-index: 10;
+    }
+    & .english {
+      z-index: -1;
+      position: relative;
+      transition: all 0.3s;
+      opacity: 0;
+      transform: translateY(200%);
+      cursor: pointer;
+      margin: 0 auto;
+      border-radius: 50%;
+      line-height: 40px;
+      width: 48px;
+      height: 48px;
+      background-color: rgba($color: #fff, $alpha: 0.8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    & .showEnglishBtn {
+      margin: 8px auto;
+      transform: translateY(0);
+      opacity: 1;
+      z-index: 10;
+    }
   }
 }
 
@@ -33,6 +108,25 @@
     & .container {
       height: 1600px;
       width: 500px;
+    }
+    & .changeLanguage {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      position: fixed;
+      bottom: 30px;
+      right: 24px;
+      z-index: 10;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #fff;
+      opacity: 0.8;
+
+      & img {
+        width: 30px;
+        height: 30px;
+      }
     }
   }
 }

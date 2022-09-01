@@ -1,5 +1,5 @@
 import React from "react";
-import icon from "public/images/group.png";
+import icon from "public/images/icon/intro.svg";
 import styles from "./index.module.scss";
 const Intro = ({ language }) => {
   return (

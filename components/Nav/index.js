@@ -1,6 +1,7 @@
 import React, { memo } from "react";
 import Info from "./Info";
 import LanguageGuide from "./LanguageGuide";
+import classnames from "classnames";
 import Intro from "./Intro";
 import Attractions from "./Attractions";
 import { AudioPlayer } from "components/AudioPlayer";
@@ -13,16 +14,15 @@ const Nav = ({ setOpenItem, openItem, language, setLanguage }) => {
     if (openItem !== clickItemName) {
       setOpenItem(clickItemName);
     } else {
-      const audio = document.querySelector("audio");
-      if (audio) {
-        audio.pause();
-      }
       setOpenItem(null);
     }
   };
 
   return (
-    <nav className={styles.nav}>
+    <nav
+      className={classnames(styles.nav, {
+        [styles.showAudio]: openItem == "LanguageGuide",
+      })}>
       <div className={styles.navItem} onClick={clickItemHandler}>
         <Thumbnail />
         <Info setOpenItem={setOpenItem} language={language} />

@@ -4,7 +4,7 @@ import arrow from "public/images/icon/arrow.svg";
 import img from "public/images/bridge.png";
 import close from "public/images/icon/viewpointGuidClose.svg";
 import leftArrow from "public/images/icon/left_arrow.svg";
-import phone from "public/images/icon/phone.svg";
+import phone from "public/images/phone.png";
 import styles from "./index.module.scss";
 const data = {
   Zh: {

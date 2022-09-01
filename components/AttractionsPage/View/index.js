@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useRouter } from "next/router";
 import dog from "public/images/dog.jpg";
 import styles from "./index.module.scss";

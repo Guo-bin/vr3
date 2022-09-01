@@ -18,7 +18,7 @@ const ChangeLanguage = ({ setOpenItem, openItem, setLanguage, language }) => {
           onClick={() => {
             setLanguage("En");
           }}
-          style={{ background: language == "En" ? "#2e8ab7" : "#fff" }}>
+          style={{ background: language == "En" ? "#fff" : "#2e8ab7" }}>
           En
         </div>
         <div
@@ -26,7 +26,7 @@ const ChangeLanguage = ({ setOpenItem, openItem, setLanguage, language }) => {
             [styles.chineseAnimation]: openItem == "ChangeLanguage",
           })}
           onClick={() => setLanguage("Zh")}
-          style={{ background: language == "Zh" ? "#2e8ab7" : "#fff" }}>
+          style={{ background: language == "Zh" ? "#fff" : "#2e8ab7" }}>
           中
         </div>
       </div>

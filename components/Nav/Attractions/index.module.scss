@@ -1,22 +1,22 @@
 .attractions {
   width: 20vw;
-  height: 62px;
+  height: 100%;
   text-align: center;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   & .icon {
-    margin-top: 8px;
     width: 24px;
+    height: 20px;
     vertical-align: middle;
     transform: scale(1.2);
     pointer-events: none;
   }
   & .title {
     font-size: 13px;
-    height: 18px;
-    position: absolute;
-    bottom: 12px;
-    right: 0;
-    left: 0;
+    // height: 18px;
     pointer-events: none;
   }
   &:hover {
@@ -27,6 +27,19 @@
   .attractions {
     & .title {
       font-size: 12px;
+    }
+  }
+}
+
+@media (min-width: 540px) {
+  .attractions {
+    & .icon {
+      transform: scale(1.5);
+      margin-top: 5px;
+    }
+    & .title {
+      margin: 5px;
+      font-size: 16px;
     }
   }
 }

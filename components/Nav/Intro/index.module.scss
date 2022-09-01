@@ -1,6 +1,6 @@
 .intro {
   width: 20vw;
-  height: 62px;
+  height: 100%;
   text-align: center;
   position: relative;
   & .icon {
@@ -27,6 +27,20 @@
   .intro {
     & .title {
       font-size: 12px;
+    }
+  }
+}
+@media (min-width: 540px) {
+  .intro {
+    & .icon {
+      width: 68px;
+      height: 68px;
+      margin-top: 5px;
+    }
+    & .title {
+      margin: 5px;
+      bottom: 25px;
+      font-size: 16px;
     }
   }
 }

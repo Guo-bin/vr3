@@ -1,7 +1,7 @@
 .nav {
   position: fixed;
-  bottom: 0;
-
+  bottom: -64px;
+  transition: 0.3s;
   & .navItem {
     background-color: #fff;
     height: 62px;
@@ -16,5 +16,21 @@
       width: 100%;
       background-color: transparent;
     }
+  }
+}
+
+.showAudio {
+  bottom: 0;
+}
+
+@media (min-width: 540px) {
+  .nav {
+    bottom: -100px;
+    & .navItem {
+      height: 100px;
+    }
+  }
+  .showAudio {
+    bottom: 0;
   }
 }

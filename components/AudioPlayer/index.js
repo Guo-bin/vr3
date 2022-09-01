@@ -1,9 +1,10 @@
 import React, { useState, useRef, useEffect } from "react";
 import styles from "./index.module.scss";
-
+import classnames from "classnames";
 import close from "public/images/icon/close.svg";
 import Play from "components/AudioPlayer/Play";
 import Pause from "components/AudioPlayer/Pause";
+import classNames from "classnames";
 
 const AudioPlayer = ({ setOpenItem, openItem }) => {
   // state
@@ -24,6 +25,8 @@ const AudioPlayer = ({ setOpenItem, openItem }) => {
 
   useEffect(() => {
     setIsPlaying(false);
+    audioPlayer.current.pause();
+    cancelAnimationFrame(animationRef.current);
   }, [openItem]);
   const calculateTime = (secs) => {
     const minutes = Math.floor(secs / 60);
@@ -68,9 +71,7 @@ const AudioPlayer = ({ setOpenItem, openItem }) => {
   };
 
   return (
-    <div
-      className={styles.audioPlayer}
-      style={{ display: openItem == "LanguageGuide" ? "flex" : "none" }}>
+    <div className={styles.audioPlayer}>
       <audio
         ref={audioPlayer}
         src='https://cdn.simplecast.com/audio/cae8b0eb-d9a9-480d-a652-0defcbe047f4/episodes/af52a99b-88c0-4638-b120-d46e142d06d3/audio/500344fb-2e2b-48af-be86-af6ac341a6da/default_tc.mp3'
