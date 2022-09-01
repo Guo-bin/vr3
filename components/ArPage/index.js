@@ -20,8 +20,8 @@ const ArPage = () => {
   const router = useRouter();
 
   useEffect(() => {
-    const body = document.querySelector("body");
-    body.style.overflow = "hidden";
+    // const body = document.querySelector("body");
+    // body.style.overflow = "hidden";
     if (windowSize.height > windowSize.width) {
       setOrientation(true);
     } else {
