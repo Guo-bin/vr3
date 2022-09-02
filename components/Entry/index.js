@@ -66,7 +66,7 @@ const description = {
 };
 const Entry = () => {
   const [currentLan, setCurrentLan] = useState();
-  const [changeLanguageBtn, setChangeLanguageBtn] = useState(false);
+  const [showLanguageBtn, setShowLanguageBtn] = useState(false);
   useEffect(() => {
     const body = document.querySelector("body");
     body.style.overflow = "auto";
@@ -109,26 +109,26 @@ const Entry = () => {
       <div
         className={styles.changeLanguage}
         onClick={() => {
-          setChangeLanguageBtn((pre) => !pre);
+          setShowLanguageBtn((pre) => !pre);
         }}>
         <img src={icon.src} alt='' />
         <div className={styles.language}>
           <div
             className={classnames(styles.english, {
-              [styles.showEnglishBtn]: changeLanguageBtn,
+              [styles.showEnglishBtn]: showLanguageBtn,
+              [styles.isSelector]: currentLan == "En",
             })}
             onClick={() => {
               setCurrentLan("En");
-            }}
-            style={{ background: currentLan == "En" ? "#fff" : "#2e8ab7" }}>
+            }}>
             En
           </div>
           <div
             className={classnames(styles.chinese, {
-              [styles.showChineseBtn]: changeLanguageBtn,
+              [styles.showChineseBtn]: showLanguageBtn,
+              [styles.isSelector]: currentLan == "Zh",
             })}
-            onClick={() => setCurrentLan("Zh")}
-            style={{ background: currentLan == "Zh" ? "#fff" : "#2e8ab7" }}>
+            onClick={() => setCurrentLan("Zh")}>
             中
           </div>
         </div>
