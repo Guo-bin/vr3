@@ -1,3 +1,4 @@
+@import "styles/palette.scss";
 .imageExamplePage {
   background-color: rgba($color: #ffffff, $alpha: 0.9);
   position: fixed;
@@ -31,6 +32,7 @@
       width: 250px;
       // height: 50px;
       text-align: center;
+      color: $font-color;
     }
     & .arrow {
       margin: 10px 0;

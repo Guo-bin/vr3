@@ -1,3 +1,4 @@
+@import "styles/palette.scss";
 .view {
   width: fit-content;
   margin-bottom: 16px;
@@ -23,6 +24,7 @@
     font-weight: 700;
     text-align: center;
     width: 100%;
+    color: $font-color;
     word-wrap: break-word;
   }
 }

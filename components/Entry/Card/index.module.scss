@@ -1,3 +1,5 @@
+@import "styles/palette.scss";
+
 .cardRight {
   position: relative;
   z-index: 1;
@@ -9,6 +11,7 @@
     left: 160px;
     top: 24px;
     font-size: 16px;
+    color: $font-color;
   }
   & .backgroundImg {
     position: absolute;
@@ -54,6 +57,7 @@
     left: 20px;
     top: 24px;
     font-size: 16px;
+    color: $font-color;
   }
   & .backgroundImg {
     width: 100%;

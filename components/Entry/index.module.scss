@@ -1,14 +1,17 @@
+@import "styles/palette.scss";
+
 .entry {
   text-align: center;
-
   & .title {
     margin: 40px 5% 24px 5%;
     font-size: 24px;
+    color: $font-color;
   }
   & .description {
     margin: 0 auto;
     width: 280px;
     font-size: 16px;
+    color: $font-color;
   }
   & .go {
     margin: 24px auto;
@@ -45,6 +48,7 @@
     left: 0;
 
     & .chinese {
+      color: $font-color;
       margin: 0 auto;
       border-radius: 50%;
       font-size: 20px;
@@ -68,6 +72,7 @@
       z-index: 10;
     }
     & .english {
+      color: $font-color;
       z-index: -1;
       position: relative;
       transition: all 0.3s;

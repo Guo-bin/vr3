@@ -1,3 +1,4 @@
+@import "styles/palette.scss";
 .attractionsPage {
   background-color: rgba($color: #fff, $alpha: 0.9);
   position: fixed;
@@ -38,7 +39,7 @@
 
     & .title {
       margin-bottom: 20px;
-      color: #2c413d;
+      color: $font-color;
       font-size: 24px;
       width: 80%;
     }

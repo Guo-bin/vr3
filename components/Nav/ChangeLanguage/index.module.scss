@@ -1,3 +1,5 @@
+@import "styles/palette.scss";
+
 .changeLanguage {
   width: 20vw;
   height: 100%;
@@ -22,6 +24,7 @@
     // height: 18px;
     // position: absolute;
     pointer-events: none;
+    color: $font-color;
   }
 
   & .language {

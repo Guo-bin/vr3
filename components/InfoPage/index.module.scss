@@ -1,3 +1,4 @@
+@import "styles/palette.scss";
 .infoPage {
   position: fixed;
   top: 0;
@@ -16,8 +17,8 @@
   & .title {
     font-weight: 800;
     margin: 21px;
-    color: #2c413d;
     font-size: 20px;
+    color: $font-color;
   }
   & .close {
     position: absolute;
@@ -46,9 +47,13 @@
         margin-left: 12px;
         font-size: 16px;
         width: 250px;
+        & .infoTitle {
+          color: $font-color;
+        }
         & .introduce {
           margin-top: 4px;
           width: 100%;
+          color: $font-color;
         }
       }
     }

@@ -1,3 +1,4 @@
+@import "styles/palette.scss";
 .introPage {
   background-color: rgba($color: #fff, $alpha: 0.8);
   // opacity: 0.5;
@@ -29,15 +30,18 @@
     & .title {
       text-align: center;
       margin-bottom: 20px;
-      color: #2c413d;
+      color: $font-color;
       font-size: 24px;
     }
     & .borderBottom {
       width: 40px;
       height: 2px;
       margin: auto;
-      background-color: #2e8ab7;
+      background-color: $font-color;
       margin-bottom: 20px;
+    }
+    & .content {
+      color: $font-color;
     }
   }
   & .close {
