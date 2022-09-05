@@ -64,7 +64,6 @@ const ArPage = () => {
           {openItem !== "AttractionsPage" && openItem !== "IntroPage" && (
             <Title language={language} />
           )}
-
           <Nav
             setOpenItem={setOpenItem}
             openItem={openItem}

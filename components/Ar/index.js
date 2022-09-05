@@ -6,7 +6,6 @@ import "aframe-extras";
 import styles from "./index.module.scss";
 const Ar = ({ targetUrl, model }) => {
   const sceneRef = useRef(null);
-
   useEffect(() => {
     const sceneEl = sceneRef.current;
     if (sceneEl) {
@@ -15,7 +14,6 @@ const Ar = ({ targetUrl, model }) => {
         arSystem.start(); // start AR
       });
     }
-
     return () => {
       if (sceneEl) {
         const arSystem = sceneEl.systems["mindar-image-system"];
