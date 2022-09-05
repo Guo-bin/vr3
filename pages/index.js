@@ -1,5 +1,5 @@
-import Homepage from "../components/home";
-
+import Homepage from "../components/Entry";
+import { serverFetch } from "request";
 export default function Home() {
   return (
     <div>

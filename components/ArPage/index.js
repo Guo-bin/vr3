@@ -60,11 +60,10 @@ const ArPage = () => {
         <CameraAuth language={language} setLanguage={setLanguage} />
       )}
       {orientation ? (
-        <div className={styles.arPage}>
+        <div className={styles.interface}>
           {openItem !== "AttractionsPage" && openItem !== "IntroPage" && (
             <Title language={language} />
           )}
-
           <Nav
             setOpenItem={setOpenItem}
             openItem={openItem}
